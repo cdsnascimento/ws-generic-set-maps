@@ -2,8 +2,8 @@ package application;
 
 import java.util.Scanner;
 
-import services.PrintService;
-import services.PrintServiceString;
+
+import services.PrintServiceGenericT;
 
 public class Program {
     
@@ -11,7 +11,7 @@ public class Program {
         
         Scanner sc = new Scanner(System.in);
 
-        PrintServiceString ps = new PrintServiceString();
+        PrintServiceGenericT<String> ps = new PrintServiceGenericT<>();
 
         System.out.println("How many values? ");
         int n = sc.nextInt();
