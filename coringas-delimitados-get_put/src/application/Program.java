@@ -1,28 +1,38 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Program {
     
     public static void main(String[] args) {
     
+        List<Integer> myInts = Arrays.asList(1, 2, 3, 4);
+        List<Double> myDoubles = Arrays.asList(3.14, 6.28);
         List<Object> myObjs = new ArrayList<Object>();
-        myObjs.add("Maria");
-        myObjs.add("Alex");
 
-        List<? super Number> myNums = myObjs;
+        copy(myInts, myObjs);
 
-        myNums.add(10);
-        myNums.add(3.14);
+        printList(myObjs);
 
+        copy(myDoubles, myObjs);
 
-        //Number x = myNums.get(0);// tempos o princípio de contravariância, quando o metodo put esta disponíve e o metodo get não
+        printList(myObjs);
+        
+    }
 
-        //Object x = myNums.get(2);
+    public static void copy(List<? extends Number> source, List<? super Number> destiny){
+        for (Number number : source){
+            destiny.add(number);
+        }
+    }
 
-        //System.out.println(x);
-
+    public static void printList(List<?> list){
+        for (Object object : list){
+            System.out.print(object + " ");
+        }
+        System.out.println();
     }
 
 }
