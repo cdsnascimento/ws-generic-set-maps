@@ -7,15 +7,21 @@ public class Program {
     
     public static void main(String[] args) {
     
-    List<Integer> intList = new ArrayList<Integer>();
-    intList.add(10);
-    intList.add(5);
+        List<Object> myObjs = new ArrayList<Object>();
+        myObjs.add("Maria");
+        myObjs.add("Alex");
 
-    List<? extends Number> list = intList;
+        List<? super Number> myNums = myObjs;
 
-    Number x = list.get(0);
+        myNums.add(10);
+        myNums.add(3.14);
 
-    //list.add(20); // tempos o princípio de covariância, quando o metodo get esta disponíve e o metodo put não
+
+        //Number x = myNums.get(0);// tempos o princípio de contravariância, quando o metodo put esta disponíve e o metodo get não
+
+        //Object x = myNums.get(2);
+
+        //System.out.println(x);
 
     }
 
