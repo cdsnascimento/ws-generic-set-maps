@@ -18,8 +18,9 @@ public class Program {
 
         System.out.println();
 
-        System.out.println("Removendo um item atraves do comando: .remove: ");
-        set.remove("Tablet");
+        System.out.println("Removendo um item atraves do comando: .removeIf: ");
+        //set.removeIf( x -> x.length() >= 3);
+        set.removeIf( x -> x.charAt(0) == 'T');
 
         for (String p : set) {
             System.out.println(p);
