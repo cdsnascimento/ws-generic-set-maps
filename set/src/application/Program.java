@@ -10,10 +10,20 @@ public class Program {
         set.add("TV");
         set.add("Tablet");
         set.add("Notebook");
-        System.out.println(set.contains("Notebook"));
+        //System.out.println(set.contains("Notebook"));
+        
         for (String p : set) {
-        System.out.println(p);
-}
+            System.out.println(p);
+        }
+
+        System.out.println();
+
+        System.out.println("Removendo um item atraves do comando: .remove: ");
+        set.remove("Tablet");
+
+        for (String p : set) {
+            System.out.println(p);
+        }
 
     }
 }
