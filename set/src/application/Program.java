@@ -19,7 +19,7 @@ public class Program {
         //union
         Set<Integer> c = new TreeSet<>(a);
         c.addAll(b);
-        System.out.println("Usando o método Union: " + c);
+        System.out.println("Usando o método union: " + c);
         //intersection
         Set<Integer> d = new TreeSet<>(a);
         d.retainAll(b);
